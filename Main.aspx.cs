@@ -25,7 +25,7 @@ public partial class Main : BasePage
             dropDownListBindDepartments();
             initInsertData();
         }
-
+        //61.150.109.162
     }
 
     public void dropDownListBindDepartments()
@@ -413,9 +413,9 @@ public partial class Main : BasePage
         int sum = db.getFristValue(sumSql);
         int add = db.getFristValue(addSql);
         int minus = db.getFristValue(minusSql);
-        this.labSum.Text = "" + sum;
-        this.labAdd.Text = "" + add;
-        this.labMinus.Text = "" + minus;
+        this.labSum.Text = "sum:" + sum;
+        this.labAdd.Text = "add:" + add;
+        this.labMinus.Text = "minus:" + minus;
     }
     protected void btnTurnOffSearch_Click(object sender, EventArgs e)
     {
@@ -472,6 +472,7 @@ public partial class Main : BasePage
             }
         }
         initDataWithSearchConditionOff();
+        returnInputForm();
     }
     protected void SelectedDepartmentChanged(object sender, EventArgs e)
     {
@@ -528,6 +529,7 @@ public partial class Main : BasePage
         int user_id = db.getFristValue(getUserIdSql);
         string event_time = ((TextBox)e.Item.FindControl("update_txtEventTime")).Text.Trim();
         string point_value = ((TextBox)e.Item.FindControl("update_txtPointValue")).Text.Trim();
+        string event_category = ((DropDownList)e.Item.FindControl("update_lstEventCategory")).SelectedValue.ToString();
         string fill_user = ((TextBox)e.Item.FindControl("update_txtFillUser")).Text.Trim();
         string evt = ((TextBox)e.Item.FindControl("update_txtEvent")).Text.Trim();
         string nowDate = DateTime.Now.ToString("yyyy-MM-dd");
@@ -560,13 +562,14 @@ public partial class Main : BasePage
             return;
         }
 
-        string sqlStr = "update points_management_DB_points set user_id=" + user_id + ",event_time='" + event_time + "',point_value=" + point_value + ",fill_user='" + fill_user + "',event='" + evt + "',update_time='" + nowDate + "' where no=" + no;
+        string sqlStr = "update points_management_DB_points set user_id=" + user_id + ",event_time='" + event_time + "',point_value=" + point_value + ",event_category=" + event_category + ",fill_user='" + fill_user + "',event='" + evt + "',update_time='" + nowDate + "' where no=" + no;
         int reValue = db.sqlEx(sqlStr);
 
         if (reValue == 0)
             Response.Write("<script>alert('update failure!');</script>");
         else
             Response.Write("<script>alert('update success!');</script>");
+
         points.EditItemIndex = -1;
 
         string searchCondition = (string)Session["search_condition"];
@@ -609,6 +612,27 @@ public partial class Main : BasePage
         {
             bindWithSearchConditionOn();
         }
+
+        DB db = new DB();
+        DropDownList update_lstEventCategory = (DropDownList)points.Items[e.Item.ItemIndex].FindControl("update_lstEventCategory");
+        string eventCategorySql = "select * from points_management_DB_event_category";
+        DataTable dt_2 = db.reDt(eventCategorySql);
+        update_lstEventCategory.DataSource = dt_2;
+        update_lstEventCategory.DataValueField = "no";
+        update_lstEventCategory.DataTextField = "category";
+        update_lstEventCategory.DataBind();
+
+        string oldEventCategory = ((TextBox)points.Items[e.Item.ItemIndex].FindControl("update_hiddenEventCategory")).Text;
+        int i = 0;
+        foreach (ListItem item in update_lstEventCategory.Items)
+        {
+            if (item.Text == oldEventCategory)
+            {
+                update_lstEventCategory.SelectedIndex = i;
+            }
+            i++;
+        } 
+        
     }
 
     protected void btnExport_Click(object sender, EventArgs e)
@@ -694,5 +718,11 @@ public partial class Main : BasePage
         {
             bindWithSearchConditionOn();
         }
+    }
+
+    public void returnInputForm()
+    {
+        this.insert_chkNames.ClearSelection();
+        this.insert_txtEvent.Text = "";
     }
 }

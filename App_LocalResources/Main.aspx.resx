@@ -123,8 +123,14 @@
   <data name="current_page" xml:space="preserve">
     <value>当前页:</value>
   </data>
+  <data name="delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
   <data name="department" xml:space="preserve">
     <value>部门</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>修改</value>
   </data>
   <data name="event" xml:space="preserve">
     <value>事件</value>
@@ -143,6 +149,9 @@
   </data>
   <data name="fill_user" xml:space="preserve">
     <value>填票人</value>
+  </data>
+  <data name="fixed_points_setting" xml:space="preserve">
+    <value>固定分设置</value>
   </data>
   <data name="frist_page" xml:space="preserve">
     <value>第一页</value>

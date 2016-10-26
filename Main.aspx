@@ -18,6 +18,7 @@
             <%= Session["role"].ToString() %>
             <%= Session["department_name"].ToString() %>
         </span>
+        <a href="FixedPointsSetting.aspx" style="font-size: 9pt"><asp:Literal runat="server" Text="<%$ Resources:fixed_points_setting%>" /></a>
         <table cellpadding="0" cellspacing="0"  Width="1000px">
         <tr align =left >
             <td colspan="3"  valign =top align =left >
@@ -39,9 +40,11 @@
         </tr>
         <tr align =left >
             <td>
+                <span style="font-size: 9pt;color:green">
                 <asp:Label ID="labSum" runat="server" Text=""></asp:Label>
                 <asp:Label ID="labAdd" runat="server" Text=""></asp:Label>
                 <asp:Label ID="labMinus" runat="server" Text=""></asp:Label>
+                </span>
             </td>
         </tr>
         </table>
@@ -65,8 +68,8 @@
                                     <td><asp:Label ID="Label8" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"update_time") %>'></asp:Label></td>  
                                     <td><asp:Label ID="Label9" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"event") %>'></asp:Label></td>  
                                     <td>
-                                        <asp:Button ID="btnEdit" runat="server" CommandName="edit" Text="edit" />
-                                        <asp:Button ID="btnDelete" runat="server" CommandName="delete" Text="delete" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"no") %>' OnLoad="btnDelete_Load" />
+                                        <asp:Button ID="btnEdit" runat="server" CommandName="edit" Text="<%$ Resources:edit%>" />
+                                        <asp:Button ID="btnDelete" runat="server" CommandName="delete" Text="<%$ Resources:delete%>" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"no") %>' OnLoad="btnDelete_Load" />
                                     </td>
                                 </tr> 
                             </table>
@@ -105,6 +108,13 @@
                                     <td>
                                         <asp:TextBox ID="update_txtEventTime" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"event_time") %>' Width="98px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="update_txtEventTime" ErrorMessage="*"></asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><asp:Literal runat="server" Text="<%$ Resources:event_category%>" /></td>
+                                    <td>
+                                        <asp:TextBox ID="update_hiddenEventCategory" runat="server" Text='<%# Eval("event_category") %>' Visible="false"></asp:TextBox>
+                                        <asp:DropDownList ID="update_lstEventCategory" runat="server" Width="98px"></asp:DropDownList>
                                     </td>
                                 </tr>
                                 <tr>
