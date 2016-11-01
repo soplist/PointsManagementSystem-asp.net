@@ -56,18 +56,18 @@
                         <ItemTemplate>
                             <table cellpadding="0" cellspacing="0" style="width: 950px">
                                 <tr>
-                                    <td><asp:Label ID="Label10" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"no") %>'></asp:Label></td>
-                                    <td><asp:Label ID="labID" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"department") %>'></asp:Label></td>
-                                    <td><asp:Label ID="Label1" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"username") %>'></asp:Label></td>
-                                    <td><asp:Label ID="Label2" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"event_time") %>'></asp:Label></td>
-                                    <td><asp:Label ID="Label3" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"point_value") %>'></asp:Label></td>  
-                                    <td><asp:Label ID="Label4" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"event_category") %>'></asp:Label></td>  
-                                    <td><asp:Label ID="Label5" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"fill_user") %>'></asp:Label></td>   
-                                    <td><asp:Label ID="Label6" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"operate_user") %>'></asp:Label></td>
-                                    <td><asp:Label ID="Label7" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"operate_time") %>'></asp:Label></td>  
-                                    <td><asp:Label ID="Label8" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"update_time") %>'></asp:Label></td>  
+                                    <td style="width:25px"><asp:Label ID="Label10" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"no") %>'></asp:Label></td>
+                                    <td style="width:45px"><asp:Label ID="labID" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"department") %>'></asp:Label></td>
+                                    <td style="width:45px"><asp:Label ID="Label1" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"username") %>'></asp:Label></td>
+                                    <td style="width:70px"><asp:Label ID="Label2" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"event_time") %>'></asp:Label></td>
+                                    <td style="width:20px"><asp:Label ID="Label3" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"point_value") %>'></asp:Label></td>  
+                                    <td style="width:30px"><asp:Label ID="Label4" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"event_category") %>'></asp:Label></td>  
+                                    <td style="width:45px"><asp:Label ID="Label5" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"fill_user") %>'></asp:Label></td>   
+                                    <td style="width:45px"><asp:Label ID="Label6" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"operate_user") %>'></asp:Label></td>
+                                    <td style="width:30px"><asp:Label ID="Label7" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"operate_time") %>'></asp:Label></td>  
+                                    <td style="width:60px"><asp:Label ID="Label8" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"update_time") %>'></asp:Label></td>  
                                     <td><asp:Label ID="Label9" runat="server" Font-Size="9pt"  Text='<%# DataBinder.Eval(Container.DataItem,"event") %>'></asp:Label></td>  
-                                    <td>
+                                    <td style="width:120px">
                                         <asp:Button ID="btnEdit" runat="server" CommandName="edit" Text="<%$ Resources:edit%>" />
                                         <asp:Button ID="btnDelete" runat="server" CommandName="delete" Text="<%$ Resources:delete%>" CommandArgument='<%# DataBinder.Eval(Container.DataItem,"no") %>' OnLoad="btnDelete_Load" />
                                     </td>
@@ -78,18 +78,18 @@
                         <HeaderTemplate>
                             <table>
                                 <tr>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:no%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:department%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:name%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:event_time%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:point_value%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:event_category%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:fill_user%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:operate_user%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:operate_time%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:update_time%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:event%>" /></td>
-                                    <td><asp:Literal runat="server" Text="<%$ Resources:operate%>" /></td>
+                                    <td style="width:25px"><asp:Literal runat="server" Text="<%$ Resources:no%>" /></td>
+                                    <td style="width:45px"><asp:Literal runat="server" Text="<%$ Resources:department%>" /></td>
+                                    <td style="width:45px"><asp:Literal runat="server" Text="<%$ Resources:name%>" /></td>
+                                    <td style="width:70px"><asp:Literal runat="server" Text="<%$ Resources:event_time%>" /></td>
+                                    <td style="width:30px"><asp:Literal runat="server" Text="<%$ Resources:point_value%>" /></td>
+                                    <td style="width:60px"><asp:Literal runat="server" Text="<%$ Resources:event_category%>" /></td>
+                                    <td style="width:45px"><asp:Literal runat="server" Text="<%$ Resources:fill_user%>" /></td>
+                                    <td style="width:60px"><asp:Literal runat="server" Text="<%$ Resources:operate_user%>" /></td>
+                                    <td style="width:60px"><asp:Literal runat="server" Text="<%$ Resources:operate_time%>" /></td>
+                                    <td style="width:60px"><asp:Literal runat="server" Text="<%$ Resources:update_time%>" /></td>
+                                    <td style="width:60px"><asp:Literal runat="server" Text="<%$ Resources:event%>" /></td>
+                                    <td style="width:60px"><asp:Literal runat="server" Text="<%$ Resources:operate%>" /></td>
                                 </tr>
                             </table>
                         </HeaderTemplate>
