@@ -132,6 +132,9 @@
   <data name="edit" xml:space="preserve">
     <value>edit</value>
   </data>
+  <data name="end_event_time" xml:space="preserve">
+    <value>end event time</value>
+  </data>
   <data name="event" xml:space="preserve">
     <value>event</value>
   </data>
@@ -194,6 +197,9 @@
   </data>
   <data name="search_turn_off" xml:space="preserve">
     <value>search turn off</value>
+  </data>
+  <data name="start_event_time" xml:space="preserve">
+    <value>start event time</value>
   </data>
   <data name="template_download" xml:space="preserve">
     <value>template download</value>

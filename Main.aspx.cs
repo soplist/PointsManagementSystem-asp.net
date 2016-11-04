@@ -101,7 +101,8 @@ public partial class Main : BasePage
     public string constructionOfWhereCondition(Boolean withHead)
     {
         string name = this.txtName.Text.Trim();
-        string eventTime = this.txtEventTime.Text.Trim();
+        string startEventTime = this.txtStartEventTime.Text.Trim();
+        string endEventTime = this.txtEndEventTime.Text.Trim();
         string operateTime = this.txtOperateTime.Text.Trim();
         string department = this.lstDepartment.SelectedValue.ToString();
 
@@ -114,9 +115,9 @@ public partial class Main : BasePage
         {
             sqlWhereCondition += " and u1.real_name='" + name + "'";
         }
-        if (eventTime != "")
+        if (startEventTime != "" && endEventTime != "")
         {
-            sqlWhereCondition += " and CONVERT(CHAR(20),p.event_time,23) like '" + eventTime + "%'";
+            sqlWhereCondition += " and event_time between '" + startEventTime + "' and '" + endEventTime + "'";
         }
         if (operateTime != "")
         {

@@ -132,6 +132,9 @@
   <data name="edit" xml:space="preserve">
     <value>修改</value>
   </data>
+  <data name="end_event_time" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
   <data name="event" xml:space="preserve">
     <value>事件</value>
   </data>
@@ -194,6 +197,9 @@
   </data>
   <data name="search_turn_off" xml:space="preserve">
     <value>关闭查询</value>
+  </data>
+  <data name="start_event_time" xml:space="preserve">
+    <value>开始时间</value>
   </data>
   <data name="template_download" xml:space="preserve">
     <value>模板下载</value>
