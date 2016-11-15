@@ -117,7 +117,7 @@ public partial class Main : BasePage
         }
         if (startEventTime != "" && endEventTime != "")
         {
-            sqlWhereCondition += " and event_time between '" + startEventTime + "' and '" + endEventTime + "'";
+            sqlWhereCondition += " and operate_time between '" + startEventTime + "' and '" + endEventTime + "'";
         }
         if (operateTime != "")
         {

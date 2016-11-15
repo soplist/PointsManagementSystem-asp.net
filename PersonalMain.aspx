@@ -21,8 +21,10 @@
             <td colspan="3"  valign =top align =left >
                 <span style="font-size: 9pt;"><asp:Literal runat="server" Text="<%$ Resources:event_time%>" /></span>
                 <asp:TextBox ID="txtEventTime" runat="server" Width="98px"></asp:TextBox>
-                <span style="font-size: 9pt;"><asp:Literal runat="server" Text="<%$ Resources:operate_time%>" /></span>
-                <asp:TextBox ID="txtOperateTime" runat="server" Width="98px"></asp:TextBox>
+                <span style="font-size: 9pt;"><asp:Literal runat="server" Text="<%$ Resources:start_event_time%>" /></span>
+                <asp:TextBox ID="txtStartEventTime" runat="server" Width="98px"></asp:TextBox>
+                <span style="font-size: 9pt;"><asp:Literal runat="server" Text="<%$ Resources:end_event_time%>" /></span>
+                <asp:TextBox ID="txtEndEventTime" runat="server" Width="98px"></asp:TextBox>
 
             </td>
             <td>

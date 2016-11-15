@@ -61,7 +61,8 @@ public partial class PersonalMain : System.Web.UI.Page
     public string constructionOfWhereCondition(Boolean withHead)
     {
         string eventTime = this.txtEventTime.Text.Trim();
-        string operateTime = this.txtOperateTime.Text.Trim();
+        string startEventTime = this.txtStartEventTime.Text.Trim();
+        string endEventTime = this.txtEndEventTime.Text.Trim();
 
         string sqlWhereCondition = "";
         if (withHead)
@@ -72,9 +73,9 @@ public partial class PersonalMain : System.Web.UI.Page
         {
             sqlWhereCondition += " and CONVERT(CHAR(20),p.event_time,23) like '" + eventTime + "%'";
         }
-        if (operateTime != "")
+        if (startEventTime != "" && endEventTime != "")
         {
-            sqlWhereCondition += " and CONVERT(CHAR(20),p.operate_time,23) like '" + operateTime + "%'";
+            sqlWhereCondition += " and operate_time between '" + startEventTime + "' and '" + endEventTime + "'";
         }
 
         return sqlWhereCondition;

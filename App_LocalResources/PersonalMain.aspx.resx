@@ -126,6 +126,9 @@
   <data name="department" xml:space="preserve">
     <value>部门</value>
   </data>
+  <data name="end_event_time" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
   <data name="event" xml:space="preserve">
     <value>事件</value>
   </data>
@@ -176,6 +179,9 @@
   </data>
   <data name="search_turn_off" xml:space="preserve">
     <value>关闭查询</value>
+  </data>
+  <data name="start_event_time" xml:space="preserve">
+    <value>开始时间</value>
   </data>
   <data name="total_page" xml:space="preserve">
     <value>总页数:</value>
