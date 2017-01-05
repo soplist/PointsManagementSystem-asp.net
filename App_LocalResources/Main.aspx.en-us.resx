@@ -189,6 +189,15 @@
   <data name="previous_page" xml:space="preserve">
     <value>previous page</value>
   </data>
+  <data name="print_points_bill" xml:space="preserve">
+    <value>print points bill</value>
+  </data>
+  <data name="ranking" xml:space="preserve">
+    <value>ranking</value>
+  </data>
+  <data name="right_points" xml:space="preserve">
+    <value>right points</value>
+  </data>
   <data name="search" xml:space="preserve">
     <value>search</value>
   </data>

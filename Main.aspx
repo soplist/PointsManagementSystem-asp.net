@@ -19,6 +19,10 @@
             <%= Session["department_name"].ToString() %>
         </span>
         <a href="FixedPointsSetting.aspx" style="font-size: 9pt"><asp:Literal runat="server" Text="<%$ Resources:fixed_points_setting%>" /></a>
+        <a href="RightPoints.aspx" style="font-size: 9pt"><asp:Literal runat="server" Text="<%$ Resources:right_points%>" /></a>
+        <a href="Ranking.aspx" style="font-size: 9pt"><asp:Literal runat="server" Text="<%$ Resources:ranking%>" /></a>
+        <a href="Ranking.aspx" style="font-size: 9pt"><asp:Literal runat="server" Text="<%$ Resources:ranking%>" /></a>
+        <a href="PrintPointsBill.aspx" style="font-size: 9pt"><asp:Literal runat="server" Text="<%$ Resources:print_points_bill%>" /></a>
         <table cellpadding="0" cellspacing="0"  Width="1000px">
         <tr align =left >
             <td colspan="3"  valign =top align =left >

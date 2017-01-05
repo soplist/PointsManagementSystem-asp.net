@@ -117,109 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="basic_information" xml:space="preserve">
-    <value>基本信息</value>
+  <data name="content_message_1" xml:space="preserve">
+    <value>......</value>
   </data>
-  <data name="current_page" xml:space="preserve">
-    <value>当前页:</value>
-  </data>
-  <data name="delete" xml:space="preserve">
-    <value>删除</value>
-  </data>
-  <data name="department" xml:space="preserve">
-    <value>部门</value>
-  </data>
-  <data name="edit" xml:space="preserve">
-    <value>修改</value>
+  <data name="content_message_2" xml:space="preserve">
+    <value>......</value>
   </data>
   <data name="end_event_time" xml:space="preserve">
-    <value>结束时间</value>
+    <value>end event time</value>
   </data>
-  <data name="event" xml:space="preserve">
-    <value>事件</value>
-  </data>
-  <data name="event_category" xml:space="preserve">
-    <value>事件类别</value>
-  </data>
-  <data name="event_time" xml:space="preserve">
-    <value>奖扣时间</value>
-  </data>
-  <data name="export" xml:space="preserve">
-    <value>导出</value>
-  </data>
-  <data name="export_switch" xml:space="preserve">
-    <value>导出开关</value>
-  </data>
-  <data name="fill_user" xml:space="preserve">
-    <value>填票人</value>
-  </data>
-  <data name="fixed_points_setting" xml:space="preserve">
-    <value>固定分设置</value>
-  </data>
-  <data name="frist_page" xml:space="preserve">
-    <value>第一页</value>
-  </data>
-  <data name="insert" xml:space="preserve">
-    <value>插入</value>
-  </data>
-  <data name="last_page" xml:space="preserve">
-    <value>最后页</value>
-  </data>
-  <data name="name" xml:space="preserve">
-    <value>姓名</value>
-  </data>
-  <data name="next_page" xml:space="preserve">
-    <value>后一页</value>
-  </data>
-  <data name="no" xml:space="preserve">
-    <value>编号</value>
-  </data>
-  <data name="operate" xml:space="preserve">
-    <value>操作</value>
-  </data>
-  <data name="operate_time" xml:space="preserve">
-    <value>添加时间</value>
+  <data name="fill__bill_user" xml:space="preserve">
+    <value>fill bill user</value>
   </data>
   <data name="operate_user" xml:space="preserve">
-    <value>添加人</value>
-  </data>
-  <data name="point_value" xml:space="preserve">
-    <value>分数</value>
-  </data>
-  <data name="previous_page" xml:space="preserve">
-    <value>前一页</value>
-  </data>
-  <data name="print_points_bill" xml:space="preserve">
-    <value>打印积分单</value>
-  </data>
-  <data name="ranking" xml:space="preserve">
-    <value>排名</value>
-  </data>
-  <data name="right_points" xml:space="preserve">
-    <value>奖扣分权利积分</value>
+    <value>operate user</value>
   </data>
   <data name="search" xml:space="preserve">
-    <value>搜索</value>
+    <value>search</value>
   </data>
-  <data name="search_condition" xml:space="preserve">
-    <value>条件查询:</value>
-  </data>
-  <data name="search_turn_off" xml:space="preserve">
-    <value>关闭查询</value>
+  <data name="staff" xml:space="preserve">
+    <value>staff</value>
   </data>
   <data name="start_event_time" xml:space="preserve">
-    <value>开始时间</value>
+    <value>start event time</value>
   </data>
-  <data name="template_download" xml:space="preserve">
-    <value>模板下载</value>
-  </data>
-  <data name="total_page" xml:space="preserve">
-    <value>总页数:</value>
-  </data>
-  <data name="update_time" xml:space="preserve">
-    <value>更新时间</value>
-  </data>
-  <data name="upload" xml:space="preserve">
-    <value>上传</value>
+  <data name="title" xml:space="preserve">
+    <value>title</value>
   </data>
 </root>
